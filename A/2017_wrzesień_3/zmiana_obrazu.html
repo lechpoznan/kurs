@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana obrazu gr. A</title>
+</head>
+<body>
+    <p><img src="z6.jpg" id="ikona"></p>
+    <p><img src="z2.jpg" id="klik"></p>
+    <script>
+        var ikonaNowa = new Image();
+        ikonaNowa.src = "z2.jpg";
+        
+        var ikonaStara = new Image();
+        ikonaStara.src = "z6.jpg";
+        
+        var raz = new Image();
+        raz.src = "z3.jpg";
+        
+        var dwa = new Image();
+        dwa.src = "z4.jpg";
+        
+        
+        var obraz = document.getElementById("ikona");
+        
+        var obrazKlik = document.getElementById("klik");
+        
+        obraz.onmouseover = function(){
+            this.src = ikonaNowa.src;
+        }
+        
+        obraz.onmouseout = function(){
+            this.src = ikonaStara.src;
+        }
+        
+        obrazKlik.onclick = function(){
+            this.src = raz.src;
+        }
+        
+        obrazKlik.ondblclick = function(){
+            this.src = dwa.src;
+        }
+        
+        obrazKlik.onmouseout = function(){
+            this.src = ikonaNowa.src;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+</body>
+
+</html>

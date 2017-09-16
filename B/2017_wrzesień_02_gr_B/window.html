@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana rozmiaru okna</title>
+
+</head>
+<body>
+    <script>
+        console.log(window.innerHeight);
+        console.log(window.innerWidth);
+    </script>
+<!--zmodyfikuj plik aby obramowanie tabeli, komórek było w stylach-->
+    <table border="1" id="tabela">
+        <tr>
+            <td>Kurs e14. grupa B</td>
+        </tr>
+    
+    </table>
+    
+    <script>
+        var tabela = document.getElementById("tabela");
+        tabela.style.height = window.innerHeight -20 + "px";
+        tabela.style.width = window.innerWidth - 20 + "px"
+    </script>
+    
+    
+    
+</body>
+
+</html>

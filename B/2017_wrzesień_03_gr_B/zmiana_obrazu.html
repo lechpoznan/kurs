@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana obrazu</title>
+</head>
+<body>
+   <p>
+        <img src="z6.jpg" id="ikona"> 
+        <img src="z3.jpg" id="klik"> 
+   </p>
+    <script>
+        var ikona_n = new Image();
+        ikona_n.src = "z2.jpg";
+        
+        
+        var ikona_p = new Image();
+        ikona_p.src = "z6.jpg";
+        
+        var ikonaKlikPoczatek = new Image();
+        ikonaKlikPoczatek.src = "z3.jpg";
+        
+        var obraz = document.getElementById("ikona");
+        
+        var obrazKlik = document.getElementById("klik");
+        
+        obraz.onmouseover = function(){
+            this.src = ikona_n.src;
+        }
+        
+        obraz.onmouseout = function(){
+            this.src = ikona_p.src;
+        }
+        
+        obrazKlik.onclick = function(){
+            this.src = ikona_p.src;
+        }
+        
+        obrazKlik.ondblclick = function(){
+            this.src = ikona_n.src;
+        }
+        
+        obrazKlik.onmouseout = function(){
+            this.src = ikonaKlikPoczatek.src;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+    
+    
+</body>
+
+</html>

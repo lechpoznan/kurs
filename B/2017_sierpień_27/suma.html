@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Suma</title>
+       <!-- <link rel="stylesheet" href="style.css">-->
+
+        <script>
+            
+            function suma(){
+                
+                var a = document.getElementById("a").value;
+                a = parseFloat(a);
+                var b = document.getElementById("b").value;
+                b = parseFloat(b);
+                //console.log(a);
+                //console.log(typeof(a));
+            
+                var suma = a + b;
+                //console.log(suma);
+                document.getElementById("wynik").value = suma;
+            
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        <fieldset>
+        <legend>Suma</legend>
+        <form>
+            <input type="number" id="a">+
+            <input type="number" id="b">=
+            <input type="number" id="wynik" disabled>
+        </form>
+        <button onclick="suma()">Oblicz</button>
+        </fieldset>
+        
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+    </body>
+</html>

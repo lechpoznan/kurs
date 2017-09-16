@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Klory hex</title>
+<script>
+    function zmianaKoloru(){
+        var tab = [];
+        for (var i = 0; i < 6; i++){
+           tab[i] = Math.floor(Math.random() * 16); 
+           
+            if (tab[i] >= 10){
+                switch (tab[i]){
+                    case 10: tab[i] = "A";
+                        break;
+                    case 11: tab[i] = "B";
+                        break;
+                    case 12: tab[i] = "C";
+                        break;
+                    case 13: tab[i] = "D";
+                        break;
+                    case 14: tab[i] = "E";
+                        break;
+                    case 15: tab[i] = "F";
+                        break;
+                              }
+            }
+            console.log(tab[i]);
+        }
+        var a = tab[0];
+        var b = tab[1];
+        var c = tab[2];
+        var d = tab[3];
+        var e = tab[4];
+        var f = tab[5];
+        var wynik = "#" + a + b + c + d + e + f;
+        console.log(wynik);
+        var akapit = document.getElementById("kolory");
+        akapit.style.color = wynik;
+        akapit.innerHTML = wynik;
+        setTimeout("zmianaKoloru();",1000);
+    }
+    
+</script>  
+</head>
+<body onload="zmianaKoloru();">
+    
+    <p id="kolory">Mój ulubiony kolor</p>
+    <!--<script>
+        zmianaKoloru();
+    </script>-->
+</body>
+
+</html>

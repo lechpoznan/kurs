@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta charset="utf-8">    
+<title>Funkcje</title>
+</head>
+<body>
+   <script>
+       
+    /*function wyswietl(){
+        console.log("kurs");
+    }  
+    
+    wyswietl();*/
+       
+       
+    function kurs(imie){
+        document.write("Masz na imię: " + imie);
+    }
+    
+    //kurs('Jan'); //wyświetli słowo Jan
+       
+    var x = "Jan";
+    //kurs(x); //wyświetli słowo Jan   
+    
+       
+    function suma(a,b){
+        document.write(a + " + " + b + " = " + (a + b));
+    }  
+    
+    function roznica(a,b){
+        document.write(a + " - " + b + " = " + (a - b));
+    }
+    
+    function mnozenie(a,b){
+        document.write(a + " * " + b + " = " + (a * b));
+    }
+       
+    function dzielenie(a,b){
+        document.write(a + " / " + b + " = " + (a / b));
+    }
+           
+    //suma(3,5);   
+    
+    alert("1 - dodawanie, 2 - odejmowanie, 3 - mnożenie,  - dzielenie")   
+    var dzialanie = prompt("Jakie działanie chcesz wykonać?");
+    var a = Number(prompt("Podaj a"));
+    var b = Number(prompt("Podaj b"));
+       
+    switch(dzialanie){
+        case "1": 
+            suma(a,b);
+            break;
+        case "2":
+            roznica(a,b);
+            break;
+        case "3":
+            mnozenie(a,b);
+            break;
+        case "4":
+            dzielenie(a,b);
+            break;
+                    }  
+       
+       
+       
+       
+   </script>
+</body>
+</html>

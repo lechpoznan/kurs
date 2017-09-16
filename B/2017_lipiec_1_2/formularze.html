@@ -1,0 +1,119 @@
+<html>
+<head>
+<meta charset="utf-8">    
+<title>Formularze</title>
+</head>
+<body>
+    
+    <!--
+   <form method="post" action="formularz.html">
+        <input type="text" id="imie" autofocus>
+        <input type="button" value="Wyślij" onclick="pokazWartosc()">
+   </form> 
+   <script>
+       function pokazWartosc(){
+//alert(document.getElementById('imie').value);
+   var imie = document.getElementById('imie').value;
+   alert(imie);
+       } 
+   </script>
+-->
+    
+   <!-- <form>
+        <input type="text" id="nowyTekst">
+    </form>
+    <p id="tekst" onclick="zmienTekst()">Kliknij, aby zmienić tekst</p>
+    <script>
+        function zmienTekst(){
+    var nowyTekst = document.getElementById('nowyTekst').value;
+    var poleTekstowe = document.getElementById('nowyTekst');
+    poleTekstowe.value = "bsdhsbhadhd";        
+            
+            
+            
+            
+    document.getElementById('tekst').innerHTML = nowyTekst;
+    //document.getElementById('nowyTekst').value = "";  
+            
+        }
+    </script>-->
+    
+    <form>
+        <input type="text" id="pole">
+    </form>
+   <p id="tekst">TEKST</p> 
+   <div id="czerwony" onclick="czerwony()">Czerwony</div>
+   <div id="zielony" onclick="zielony()">Zielony</div>
+   <div id="niebieski" onclick="niebieski()">Niebieski</div>
+   <div id="wyczysc" onclick="wyczysc()">Wyczyść</div>
+   <div id="zmienTekst" onclick="zmienTekst()">Zmień tekst</div> 
+   <script>
+   var pole = document.getElementById('pole');
+   var nowyTekst = document.getElementById('zmienTekst').value;
+   function czerwony(){
+       tekst.style.color = 'red';
+   } 
+   function zielony(){
+       tekst.style.color = 'green';
+   }
+   function niebieski(){
+       tekst.style.color = 'blue';
+   }
+   function wyczysc(){
+       tekst.style.color = 'black';
+   }
+   function zmienTekst(){
+       if(pole.value != ""){
+           tekst.innerHTML = pole.value;
+       }
+       
+   }
+   </script> 
+    
+    
+    
+    <!--<form>
+        <input type="radio" name="kolor" id="czerwony" checked><label>Czerwony</label><br>
+        <input type="radio" name="kolor" id="zielony"><label>Zielony</label>
+    </form>
+    <button onclick="odznaczCzerwony()">Odznacz czerwony</button>
+    <button onclick="zaznaczCzerwony()">Zaznacz czerwony</button>
+    
+    <script>
+    function odznaczCzerwony(){
+        document.getElementById('czerwony').checked = false;
+    }
+        
+    function zaznaczCzerwony(){
+        document.getElementById('czerwony').checked = true;
+    }
+    </script>-->
+    
+    <!--
+    <form>
+        <label>powierzchnia w m<sup>2</sup></label>
+        <input type="number" id="ile"><br>
+        <input type="radio" name="kolor" id="duze" checked><label>Płytka 25x25</label><br>
+        <input type="radio" name="kolor" id="male"><label>Płytka 10x10</label>
+    </form>
+    <button onclick="przelicz()">Przelicz</button>
+    
+    
+    <script>
+    
+    var ile = document.getElementById('ile');
+    var wynik;
+    function przelicz(){
+        if(document.getElementById('duze').checked == true){
+            wynik = ile.value * 70;
+            document.getElementById('wynik').innerHTML = "koszt kafelkowania " + wynik + " zł";
+        } else {
+            wynik = ile.value * 80;
+            document.getElementById('wynik').innerHTML = "koszt kafelkowania " + wynik + " zł";
+        }
+        
+    }    
+    </script>
+    <p id = "wynik"></p>-->
+</body>
+</html>

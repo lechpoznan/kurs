@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Funkcje</title>
+    <script>
+   
+    </script>
+</head>
+<body>
+    <input type="number" id="boka">
+    <input type="number" id="bokb">
+    <button onclick="pole();">Oblicz</button>
+    <div id="wynik">Wynik</div>
+    <script>
+  //funkcja obliczająca pole prostokąta
+    
+    function poleProstokata(szerokosc,wysokosc){
+        var pole = szerokosc * wysokosc;
+        return pole;
+    }
+        
+    var wynik = poleProstokata(2,3);    
+    console.log(wynik); 
+        
+   
+        function pole(){    
+        var a = document.getElementById("boka").value;
+        var b = document.getElementById("bokb").value;
+        var pole = a * b;
+        document.getElementById("wynik").innerHTML = "Pole prostokąta wynosi: " +  pole + "cm<sup>2</sup>";
+        }
+        
+        
+        
+        
+        
+    </script>
+    
+</body>
+
+</html>

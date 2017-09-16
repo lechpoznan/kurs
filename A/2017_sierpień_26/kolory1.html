@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Zmiana koloru</title>
+       
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function czas(){
+                var tab = [];
+                for (var i = 0; i < 6; i++){
+                    tab[i] =   Math.floor(Math.random() * 16);
+                    
+                    if(tab[i] >= 10){
+                        switch(tab[i]){
+                            case 10: tab[i] = "A";
+                            break;
+                            case 11: tab[i] = "B";
+                            break;    
+                            case 12: tab[i] = "C";
+                            break;
+                            case 13: tab[i] = "D";
+                            break;
+                            case 14: tab[i] = "E";
+                            break;
+                            case 15: tab[i] = "F";
+                            break;
+                                     }
+                    }
+                    
+                }
+                //document.write(tab[0]);
+                var a = tab[0];
+                var b = tab[1];
+                var c = tab[2];
+                var d = tab[3];
+                var e = tab[4];
+                var f = tab[5];
+                var wynik = "#" + a + b + c + d + e + f;
+                
+                console.log(wynik);
+                var zmienkolor = document.getElementById("kolor");
+                zmienkolor.innerHTML = wynik;
+                zmienkolor.style.color = wynik;
+                setTimeout("czas()",1000);
+            }
+        
+        </script>
+        
+    </head>
+    <body onload="czas()">
+        <p id="kolor">Mój ulubiony kolor</p>
+        <script>
+            //czas();
+        </script>
+        
+		
+
+    </body>
+</html>

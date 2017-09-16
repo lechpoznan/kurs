@@ -1,0 +1,14 @@
+body{
+    background-color: darkgrey;
+}
+
+fieldset{
+    width: 300px;
+    background-color: grey;
+}
+
+#blok{
+    width: 330px;
+    background-color: grey;
+    color: grey;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<HTML lang="pl">
+<HEAD>
+	<META charset="UTF-8">
+	<TITLE>Kolory</TITLE>
+	
+    <!--<link rel="stylesheet" href="style.css">-->
+
+	
+</HEAD>
+<BODY>
+
+    <button id="czerwony" onclick="czerwony()">Czerwony</button>
+    <button id="zielony" onclick="zielony()">Zielony</button>
+    <input type="text" id="kolor">
+    <button id="zmien" onclick="zmien()">Zmień</button>
+    <input type="text" id="kolorHex" value="Zmień kolor hex">
+    <button id="zmienHex" onclick="zmienHex()" >ZmieńHex</button>
+    <p id="tekst">Kurs E.14 grupa A</p>
+    
+    <script>
+        var tekst = document.getElementById("tekst");
+        var kolorHex = document.getElementById("kolorHex");
+        kolorHex.onfocus = function(){
+            this.value = '';
+            this.style.color = "red";
+        };
+        function czerwony(){
+            tekst.style.color = "red";
+        }
+        
+        function zielony(){
+            tekst.style.color = "green";
+        }
+        
+        function zmien(){
+            var kolor = document.getElementById("kolor").value;
+            //console.log(kolor);
+            tekst.style.color = kolor;
+            document.getElementById("kolor").value = '';
+        }
+        
+        function zmienHex(){
+            var kolorHex = "#" + document.getElementById("kolorHex").value;
+            //console.log(kolor);
+            tekst.style.color = kolorHex;
+            document.getElementById("kolorHex").value = 'Zmień kolor hex';
+            document.getElementById("kolorHex").style.color = 'black';
+        }
+    </script>
+    
+    
+    
+</BODY>
+</HTML>

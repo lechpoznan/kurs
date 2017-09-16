@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana obrazu gr. A</title>
+</head>
+<body>
+    <input type="number" id="boka">
+    <input type="number" id="bokb">
+    <button onclick="poleProstokata2();">Oblicz</button><br>
+    <div id="wynik">Wynik</div>
+   <script>
+       //funkcja obliczająca pole prostokąta
+       
+       function poleProstokata(szerokosc, dlugosc){
+           var pole = szerokosc * dlugosc;
+           return pole;
+       }
+       
+       //var pole = poleProstokata(3,4);
+       //console.log(pole);
+       
+       /*var a = 3;
+       var b = 4;
+       var pole = poleProstokata(a,b);
+       console.log(pole);*/
+       
+       function poleProstokata2(){
+           var a = document.getElementById("boka").value;
+           var b = document.getElementById("bokb").value;
+           var blok = document.getElementById("wynik");
+           if (a > 0 && b > 0){
+           var pole = a * b;
+           //console.log(typeof(pole));
+           
+           blok.style.color = "black";
+           blok.innerHTML = "Pole prostokata wynosi: " + pole.toFixed(3) + "cm<sup>2</sup>";
+
+           }else{
+               blok.style.color = "red";
+               blok.innerHTML = "Błędne dane!";
+           }
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+       }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   </script>
+    
+</body>
+
+</html>

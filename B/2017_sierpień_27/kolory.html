@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<HTML lang="pl">
+<HEAD>
+	<META charset="UTF-8">
+	<TITLE>Kolory</TITLE>
+	
+    <link rel="stylesheet" href="style.css">
+
+	
+</HEAD>
+<BODY>
+<fieldset>
+<legend>Kolory</legend>
+<form>
+    <input type="text" id="pierwszy">
+    <input type="text" id="drugi">
+    <input type="text" id="trzeci">
+</form>
+    <button onclick="zmienKolor()">Zatwierdź</button>
+</fieldset>
+    <div id="blok">
+        <p id="tekst1">Mój pierwszy ulubiony kolor</p>
+        <p id="tekst2">Mój drugi ulubiony kolor</p>
+        <p id="tekst3">Mój trzeci ulubiony kolor</p>
+    </div>
+    
+<script>
+    function zmienKolor(){
+        
+        var pierwszy = document.getElementById("tekst1");
+        var drugi = document.getElementById("tekst2");
+        var trzeci = document.getElementById("tekst3");
+        var kolorPierwszy = document.getElementById("pierwszy").value;
+        var kolorDrugi = document.getElementById("drugi").value;
+        var kolorTrzeci = document.getElementById("trzeci").value;
+        pierwszy.style.color = kolorPierwszy;
+        drugi.style.color = kolorDrugi;
+        trzeci.style.color = kolorTrzeci;
+        
+    }
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</BODY>
+</HTML>

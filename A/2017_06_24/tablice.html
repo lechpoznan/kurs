@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Tablice</title>
+       
+        
+    </head>
+    <body>
+
+    <script>    
+     
+        // pierwszy sposób tworzenia tablicy
+        
+   /*     var szkola = ['Sandra', 'Asia', 'Kamil', 'Andrzej'];
+        
+        document.write(szkola[0]); //Sandra
+        szkola[4] = 'Grzegorz';
+        document.write(szkola[4]); 
+        
+        
+        //drugi sposób worzenia tablicy
+        
+        var kolory = new Array('fioletowy', 'akwamaryna','blękit paryski');
+        document.write("<br>" + "Tablica kolory ma: " + kolory.length + " elementy");
+        */
+        
+   // utwórz tablice auta i użytkownik z kalwiatury ma wpisaćswoje trzy ulubione samochody
+        
+   /* var auto1 = prompt("Podaj auto");    
+    var auto2 = prompt("Podaj auto");    
+    var auto3 = prompt("Podaj auto");    
+        
+    var auta = new Array(auto1, auto2, auto3);
+        
+    document.write("Pierwsze auto: " + auta[0] + "<br>");
+    document.write("Drugie auto: " + auta[1] + "<br>");
+    document.write("Trzecie auto: " + auta[2]);*/
+        
+        
+   //tablice wielowymiarowe
+        
+   /* var dane = new Array(
+    new Array('Jan', 'Kowal', 'Poznań'),
+    new Array('Agnieszka', 'Kowal', 'Gniezno'),
+    new Array('Paweł', 'Kowal', 'Poznań'),
+    );
+        
+    //document.write(dane[dane.length - 1]);
+        
+    //document.write(dane[1][2]);  //Gniezno
+    document.write(dane[1][0]);  //Agnieszka*/
+    
+    
+    //sortowanie tablic
+        
+    var cyfry = new Array(1, 20, 2, 25, 203,  190, -1);
+    
+    
+    //liczby 1-10    
+    /*for (var i = 1; i <= 10; i++){
+        document.write(i + "<br>");
+    }*/
+        
+    /*document.write("Liczby przed sortowaniem: <br>");    
+    for (var i = 0; i < cyfry.length; i++){
+        document.write(cyfry[i] + "<br>");
+    }
+        
+    cyfry.sort(
+    function (a,b){
+        return(a-b);
+    }
+    );    
+        
+    document.write("Liczby po sortowaniu: <br>");    
+    for (var i = 0; i < cyfry.length; i++){
+        document.write(cyfry[i] + "<br>");
+    }  */  
+     
+    //ostatni znak imienia 
+        
+  /*  var imie = prompt("Podaj imie");
+    var ostatniZnak = imie.charAt(imie.length - 1);
+    document.write(ostatniZnak);*/
+        
+        
+    /*var zwierze1 = prompt("Podaj zwierzaka 1");
+    //zwierze1 = zwierze1.toLowerCase();
+    //zwierze1 = zwierze1.toUpperCase();
+    
+    zwierze1 = zwierze1.charAt(0).toUpperCase() + zwierze1.slice(1).toLowerCase();  
+    
+            
+    document.write(zwierze1); */    
+            
+    /*var panstwa = new Array('Polska', 'Australia', 'Islandia');
+    
+    panstwa.push('Niemcy', 'Rosja');
+    panstwa.pop();  //usuwa ostatni element 
+    panstwa.sort();
+    panstwa.reverse();
+    for (var i = 0; i < panstwa.length; i++){
+        document.write(panstwa[i] + "<br>");
+    } */
+            
+            
+  //******************************************
+  //tablice asocjacyjne
+            
+ /* var uczen = new Array();
+  uczen['imie'] = 'Asia';
+  uczen['nazwisko'] = 'Nowak';
+  uczen['panstwo'] = 'Polska';
+        
+  document.write(uczen['imie']);*/
+            
+  /*var nauczyciel = {"imie" : "Jan", "nazwisko" : "Kowalski", "panstwo" : "Polska"};          
+  for(var klucz in nauczyciel){
+      document.write(klucz.charAt(0).toUpperCase() + klucz.slice(1) + ": " + nauczyciel[klucz] + "<br>");
+  }*/
+            
+            
+            
+            
+            
+            
+            
+    </script>
+
+        
+        
+    </body>
+</html>

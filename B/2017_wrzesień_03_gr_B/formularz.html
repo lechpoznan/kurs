@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formularz</title>
+    <style>
+        .pole{
+            border-color: aliceblue;
+        }
+        
+        .blad{
+            border-color: red;
+        }
+    </style>
+  <script>
+        function sprawdz(){
+            if(formularz.nazw.value.length < 2){
+                formularz.nazw.focus();
+                formularz.imie.className = 'pole';
+                formularz.zawod.className = 'pole';
+                formularz.nazw.className = 'blad';
+                alert('Brak danych w polu nazwisko!');
+            } else if(formularz.imie.value.length < 3){
+                formularz.imie.focus();
+                formularz.imie.className = 'blad';
+                formularz.nazw.className = 'pole';
+                formularz.zawod.className = 'pole';
+                alert('Brak danych w polu imie!');
+            }else if(formularz.zawod.value.length < 3){
+                formularz.zawod.focus();
+                formularz.zawod.className = 'blad';
+                formularz.nazw.className = 'pole';
+                formularz.imie.className = 'pole';
+                alert('Brak danych w polu zawód!');
+            }
+            
+            
+            
+            
+            var nazwisko = formularz.nazw.value;
+            nazwisko = nazwisko.charAt(0).toUpperCase() + nazwisko.slice(1).toLowerCase();
+            console.log(nazwisko);
+            
+            var imie = formularz.imie.value;
+            imie = imie.charAt(0).toUpperCase() + imie.slice(1).toLowerCase();
+            console.log(imie);
+            
+            var zawod = formularz.zawod.value;
+            zawod = zawod.charAt(0).toUpperCase() + zawod.slice(1).toLowerCase();
+            console.log(zawod);
+            
+        }
+    </script>
+</head>
+<body>
+    <form name="formularz">
+        Dane osobowe:<br>
+        Nazwisko:
+        <input type="text" name = "nazw" value ="" size="40" class="pole"><br>
+        Imię:
+        <input type="text" name = "imie" value ="" size="40" class="pole"><br>
+        Zawód:
+        <input type="text" name = "zawod" value ="" size="40" class="pole">
+    </form>
+    <button onclick="sprawdz()">Wyślij</button>
+    
+</body>
+
+</html>

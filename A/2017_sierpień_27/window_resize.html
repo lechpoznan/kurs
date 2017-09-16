@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Window 4TC</title>
+       <!-- <link rel="stylesheet" href="style2.css">-->
+    <script>
+        var winH = 0;
+        var winW = 0;
+        //console.log(typeof(window.innerHeight));
+        
+       if (typeof(window.innerHeight)=='number'){
+                    winH = window.innerHeight;
+                    winW = window.innerWidth;
+                } else {
+                    winH = document.getElement.clientHeight;
+                    winW = document.getElement.clientWidth;
+                }
+        
+        
+    </script>
+        
+    </head>
+    
+    <body onresize="zmienWielkosc()" onload="zmienWielkosc()">
+       <!--zmodyfikuj plik aby obramowanie tabeli, komórek było w stylach--> 
+        <table border="1" id="tabela">
+            <tr>
+                <td border="1">Kurs e.14 grupa A</td>
+            </tr>
+        </table>
+        
+        <script>
+            /*var tabela1 = document.getElementById("tabela");
+            tabela1.style.height = winH - 20 + "px";
+            tabela1.style.width = winW - 20 + "px";
+                */
+            function zmienWielkosc(){
+                if (typeof(window.innerHeight)=='number'){
+                    winH = window.innerHeight;
+                    winW = window.innerWidth;
+                } else {
+                    winH = document.getElement.clientHeight;
+                    winW = document.getElement.clientWidth;
+                }
+
+            var tabela = document.getElementById("tabela");
+            tabela.style.height = winH - 20 + "px";
+            tabela.style.width = winW - 20 + "px";
+                
+            }
+        </script>
+        
+        
+        
+        
+        
+        
+        <script>
+           /* console.log("Wysokość wewnętrzna okna: " + window.innerHeight + "px");
+            console.log("Wysokość zewnetrzna okna: " + window.outerHeight + "px");
+            console.log("Szerokość wewnetrzna okna: " + window.innerWidth + "px");
+            console.log("Szerokość zewnętrzna okna: " + window.outerWidth + "px");*/
+        </script>
+
+
+      
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>
+ 

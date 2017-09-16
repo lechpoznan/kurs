@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Funkcje2</title>
+    <script>
+   
+    </script>
+</head>
+<body>
+   <div id="poleProstokata">Pole prostokąta</div>
+    <div id="objetoscSzescianu">objętość sześcianu></div>
+       <script>
+       //pole prostokąta i objetość sześcianu w jednej funkcji
+       
+       function poleObjetosc(szerokosc, wysokosc, glebokosc){
+           var pole = szerokosc * wysokosc;
+           var objetosc = szerokosc * wysokosc * glebokosc;
+           var wynik = [pole,objetosc];
+           return wynik;
+       }
+       
+       var obliczPole = poleObjetosc(2,3,4)[0];
+       //console.log(obliczPole);
+       
+       var poleWypisz = document.getElementById("poleProstokata");
+       poleWypisz.innerHTML = "Pole prostokąta wynosi: " + obliczPole + "cm<sup>2</sup>";
+       
+           
+       var objetoscWypisz = poleObjetosc(2,3,4)[1];     
+       var objetoscSzescianu = document.getElementById("objetoscSzescianu");
+       objetoscSzescianu.innerHTML = "Objętość sześcianu wynosi: " + objetoscWypisz + "cm<sup>3</sup>";
+   </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+
+</html>

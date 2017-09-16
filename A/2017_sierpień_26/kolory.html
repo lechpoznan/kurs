@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        
+        <title>26.08</title>
+       
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <fieldset>
+        <legend>Kolory</legend>
+        <form>
+            <input type="text" id="pierwszy">Pierwszy kolor
+            <input type="text" id="drugi">Drugi kolor
+            <input type="text" id="trzeci">Trzeci kolor
+        </form>
+        
+		<button onclick = "kolory()">Zatwierdź</button>
+        </fieldset>
+        
+        <div id="kolory">
+            <p id="tekst1">Mój ulubiony pierwszy kolor</p>
+            <p id="tekst2">Mój ulubiony drugi kolor</p>
+            <p id="tekst3">Mój ulubiony trzeci kolor</p>
+        </div>
+        
+        <script>
+        function kolory(){
+            var x1 = document.getElementById("tekst1");
+            var x2 = document.getElementById("tekst2");
+            var x3 = document.getElementById("tekst3");
+            var kolor1 = document.getElementById("pierwszy").value;
+            var kolor2 = document.getElementById("drugi").value;
+            var kolor3 = document.getElementById("trzeci").value;
+            x1.style.color = kolor1;
+            x2.style.color = kolor2;
+            x3.style.color = kolor3;
+        }
+        
+        </script>
+        
+        
+        
+        
+
+    </body>
+</html>

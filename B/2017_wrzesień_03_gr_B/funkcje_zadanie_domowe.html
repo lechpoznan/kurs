@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Funkcje2</title>
+    <script>
+   
+    </script>
+</head>
+<body>
+  
+   <input type="radio" name="oblicz" value="pole" id="pole" checked>Pole prostokąta
+   <input type="radio" name="oblicz" value="objetosc" id="objetosc">Objętość Sześcianu<br>
+   
+   <input type="number" id="a">szerokość
+   <input type="number" id="b">wysokość
+   <input type="number" id="c" disabled>głębokość
+   <button id="przycisk">Oblicz</button>
+   <div>Wynik</div>
+        
+    
+    <script>
+        
+        var pole = document.getElementById("pole");
+        var przycisk = document.getElementById("przycisk");
+        przycisk.onclick = oblicz;
+        function oblicz(){
+       
+        if (pole.checked){
+            console.log("pole");
+        }else{
+            console.log("objętość");
+        } }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+
+</html>
