@@ -9,17 +9,17 @@
     <legend>Rejestracja</legend>
 <form>
 <div id="blok"></div>
-<input type="text" id="imie" placeholder="imię"><br><br>
+<input type="text" id="imie" placeholder="imię" autofocus><br><br>
 <input type="text" id="nazwisko" placeholder="nazwisko"><br><br>
 <input type="text" id="login" placeholder="login"><br><br>
 <input type="email" id="mail1" placeholder="adres poczty"><br><br>
 <input type="email" id="mail2" placeholder="powtórz adres poczty"><br><br>
 <input type="password" id="pass1" placeholder="podaj hasło"><br><br>
 <input type="password" id="pass2" placeholder="powtórz hasło"><br><br>
-<input type="date" id="data"> Urodziny<br><br>
+<input type="date" id="data" max="2017-10-01"> Urodziny<br><br>
 <input type="checkbox" id="regulamin">Akceptuję regulamin<br>
 </form>
-    <button id="przycisk">Wyślij</button>
+    <button id="przycisk" disabled  >Wyślij</button>
     <button id="popraw">Popraw dane</button>
         </fieldset>
   <script src="zdarzenia.js"></script>
