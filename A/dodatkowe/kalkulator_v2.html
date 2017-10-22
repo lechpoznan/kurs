@@ -30,27 +30,30 @@
         var sprawdzB;
         var reg = /^\d{1,10}([.|,]\d{1,10})?$/;
 
+
         function oblicz(){
-            sprawdzA = reg.test(a.value);
-            sprawdzB = reg.test(b.value);
+            var poleA = a.value;
+            var poleB = b.value;
+            sprawdzA = reg.test(poleA);
+            sprawdzB = reg.test(poleB);
             //console.log(sprawdzA);
             //console.log(sprawdzB);
             if (sprawdzA && sprawdzB){
-               a.value = a.value.replace(',','.');
-               b.value = b.value.replace(',','.');
+               poleA = poleA.replace(',','.');
+               poleB = poleB.replace(',','.');
 
                 switch (wybor.value){
                 case 'dodawanie':
-                    oblicz = Number(a.value) + Number(b.value);
+                    oblicz = Number(poleA) + Number(poleB);
                     break;
                 case 'odejmowanie':
-                    oblicz = Number(a.value) - Number(b.value);
+                    oblicz = Number(poleA) - Number(poleB);
                     break;
                 case 'mnozenie':
-                    oblicz = Number(a.value) * Number(b.value);
+                    oblicz = Number(poleA) * Number(poleB);
                     break;
                 default:
-                    oblicz = Number(a.value) / Number(b.value);
+                    oblicz = Number(poleA) / Number(poleB);
             }
                 oblicz = oblicz.toFixed(2);
                 wynik.value = oblicz;
