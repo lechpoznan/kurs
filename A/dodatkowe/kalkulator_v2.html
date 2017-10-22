@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>kalkulator</title>
+</head>
+<body>
+
+    <input type="text" id="a">
+    <select id="wybor">
+    <option value="dodawanie">+</option>
+    <option value="odejmowanie">-</option>
+    <option value="mnozenie">*</option>
+    <option value="dzielenie">/</option>
+    </select>
+    <input type="text" id="b">
+    <button id="przycisk">=</button>
+    <input type="text" id="wynik" disabled>
+    <div id="komunikat"></div>
+
+    <script>
+        var przycisk = document.getElementById('przycisk');
+        var a = document.getElementById('a');
+        var b = document.getElementById('b');
+        var wynik = document.getElementById('wynik');
+        var wybor = document.getElementById('wybor');
+        var komunikat = document.getElementById('komunikat');
+        var oblicz;
+        var sprawdzA;
+        var sprawdzB;
+        var reg = /^\d{1,10}([.|,]\d{1,10})?$/;
+
+        function oblicz(){
+            sprawdzA = reg.test(a.value);
+            sprawdzB = reg.test(b.value);
+            //console.log(sprawdzA);
+            //console.log(sprawdzB);
+            if (sprawdzA && sprawdzB){
+               a.value = a.value.replace(',','.');
+               b.value = b.value.replace(',','.');
+
+                switch (wybor.value){
+                case 'dodawanie':
+                    oblicz = Number(a.value) + Number(b.value);
+                    break;
+                case 'odejmowanie':
+                    oblicz = Number(a.value) - Number(b.value);
+                    break;
+                case 'mnozenie':
+                    oblicz = Number(a.value) * Number(b.value);
+                    break;
+                default:
+                    oblicz = Number(a.value) / Number(b.value);
+            }
+                oblicz = oblicz.toFixed(2);
+                wynik.value = oblicz;
+                komunikat.textContent = '';
+            }else{
+                wynik.value = '';
+                komunikat.style.color = '#ce0b0b';
+                komunikat.style.fontSize = '30px';
+                komunikat.textContent = 'Wpisz poprawnie wszystkie dane';
+            }
+
+        }
+        przycisk.addEventListener('click',oblicz);
+    </script>
+</body>
+</html>

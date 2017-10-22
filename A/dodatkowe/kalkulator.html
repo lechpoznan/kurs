@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>kalkulator</title>
+</head>
+<body>
+
+    <input type="number" id="a">
+    <select id="wybor">
+    <option value="dodawanie">+</option>
+    <option value="odejmowanie">-</option>
+    <option value="mnozenie">*</option>
+    <option value="dzielenie">/</option>
+    </select>
+    <input type="number" id="b">
+    <button id="przycisk">=</button>
+    <input type="text" id="wynik" disabled>
+
+    <script>
+        var przycisk = document.getElementById('przycisk');
+        var a = document.getElementById('a');
+        var b = document.getElementById('b');
+        var wynik = document.getElementById('wynik');
+        var wybor = document.getElementById('wybor');
+        var oblicz;
+
+        function oblicz(){
+            //alert(a.value);
+            //alert(wybor.value);
+            //wynik.value = wybor.value;
+
+            if (wybor.value == 'dodawanie'){
+                //alert('wybrał dodawanie');
+                //alert(typeof(a.value));
+                oblicz = Number(a.value) + Number(b.value);
+                wynik.value = oblicz;
+            } else if (wybor.value == 'odejmowanie'){
+                oblicz = Number(a.value) - Number(b.value);
+                wynik.value = oblicz;
+            } else if (wybor.value == 'mnozenie'){
+                oblicz = Number(a.value) * Number(b.value);
+                wynik.value = oblicz;
+            } else {
+                oblicz = Number(a.value) / Number(b.value);
+                wynik.value = oblicz;
+            }
+
+        }
+        przycisk.addEventListener('click',oblicz);
+    </script>
+</body>
+</html>
