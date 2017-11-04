@@ -1,5 +1,5 @@
 <?php
-  /*  $imie = $_GET['imie'];
+    $imie = $_GET['imie'];
     $nazwisko = $_GET['nazwisko'];
     if (empty($_GET['imie']) || empty($_GET['nazwisko'])){
         echo "Nie wprowadziłeś danych!";
@@ -7,7 +7,7 @@
         echo 'Twoje imię: <span style="color:red">', $imie, '</span><br>';
         echo 'Twoje imię: ', $imie, '<br>';
         echo 'Twoje nazwisko: ', $nazwisko;
-    }*/
+    }
 
 //****************************************
 
@@ -25,12 +25,12 @@
 //************************************
 
 
-/*if (isset($_GET['radio1'])){
+if (isset($_GET['radio1'])){
     echo 'Zaznaczona opcja: ', $_GET['radio1'];
 }else{
     //echo 'Proszę zaznaczyć jedną z opcji';
     header('Location: formularz.php');
-}*/
+}
 
 
 //*************************************

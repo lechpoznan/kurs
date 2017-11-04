@@ -1,0 +1,7 @@
+zapytanie 1: SELECT `zwierzeta`.`imie`, `zwierzeta`.`telefon`, `zwierzeta`.`szczepienie`,zwierzeta.opis FROM `zwierzeta`;
+
+zapytanie 2:SELECT `zwierzeta`.`id`, `zwierzeta`.`imie`, zwierzeta.wlasciciel FROM `zwierzeta` WHERE (`zwierzeta`.`rodzaj` =1);
+
+zapytanie 3: SELECT `zwierzeta`.`imie`, `uslugi`.`nazwa` FROM zwierzeta INNER JOIN uslugi ON zwierzeta.usluga_id=uslugi.id;
+
+zapytanie 4: SELECT AVG(`uslugi`.`cena`) as "średnia cena" FROM `uslugi`;
