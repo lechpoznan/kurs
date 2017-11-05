@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Arkusz E.14-01-15.08</title>
+</head>
+<body>
+ <h1>KWADRAT</h1>
+    Podaj długość boku:
+    <input type="text" id="bok"><br>
+    <button id="przyciskPole">licz pole</button>
+    <button id="przyciskObwod">licz obwód</button><br>
+    <div id="komunikat"></div>
+    <script>
+        var bok = document.getElementById('bok');
+        var przyciskPole = document.getElementById('przyciskPole');
+        var przyciskObwod = document.getElementById('przyciskObwod');
+        var komunikat = document.getElementById('komunikat');
+        var dlugosc;
+        var nieLiczba;
+        var pole;
+
+        var regNieLiczba = /\D/;
+        var dwa = 2;
+
+
+        function pole(){
+            dlugosc = bok.value.length;
+            nieLiczba = regNieLiczba.test(bok.value);
+            if(dlugosc == 0 || nieLiczba){
+                komunikat.textContent = "Należy wpisać wartość liczbową";
+            }else{
+                pole = Math.pow(bok.value,2);
+                komunikat.innerHTML = 'P = a<sup>2</sup> = ' +  pole;
+            }
+        }
+
+        przyciskPole.addEventListener('click',pole);
+
+    </script>
+</body>
+</html>

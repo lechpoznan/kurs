@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Data i czas</title>
+    <script>
+        function czas(){
+            var data = document.getElementById("data");
+            var czas = document.getElementById("czas");
+            var dzienTygodnia = document.getElementById("dzienTygodnia");
+
+            var teraz = new Date();
+
+            var dzien = teraz.getDate();
+            if(dzien < 10){
+                dzien = "0"+dzien;
+            }
+
+            var miesiac = teraz.getMonth() + 1;
+
+            switch(miesiac){
+                case 1:
+                    miesiac = "styczeń";
+                    break;
+                case 2:
+                    miesiac = "luty";
+                    break;
+                case 3:
+                    miesiac = "marzec";
+                    break;
+                case 4:
+                    miesiac = "kwiecień";
+                    break;
+                case 5:
+                    miesiac = "maj";
+                    break;
+                case 6:
+                    miesiac = "czerwiec";
+                    break;
+                case 7:
+                    miesiac = "lipiec";
+                    break;
+                case 8:
+                    miesiac = "sierpień";
+                    break;
+                case 9:
+                    miesiac = "wrzesień";
+                    break;
+                case 10:
+                    miesiac = "październik";
+                    break;
+                case 11:
+                    miesiac = "listopad";
+                    break;
+                case 12:
+                    miesiac = "grudzień";
+                    break;
+            }
+
+            var rok = teraz.getFullYear();
+
+            var godzina = teraz.getHours();
+            if(godzina < 10){
+                godzina = "0"+godzina;
+            }
+
+            var minuty = teraz.getMinutes();
+            if(minuty < 10){
+                minuty = "0"+minuty;
+            }
+
+            var sekundy = teraz.getSeconds();
+            if(sekundy < 10){
+                sekundy = "0"+sekundy;
+            }
+
+            var dzienTyg = teraz.getDay();
+
+            switch(dzienTyg){
+                case 0:
+                    dzienTyg = "niedziela";
+                    break;
+                case 1:
+                    dzienTyg = "poniedziałek";
+                    break;
+                case 2:
+                    dzienTyg = "wtorek";
+                    break;
+                case 3:
+                    dzienTyg = "środa";
+                    break;
+                case 4:
+                    dzienTyg = "czwartek";
+                    break;
+                case 5:
+                    dzienTyg = "piątek";
+                    break;
+                case 6:
+                    dzienTyg = "sobota";
+                    break;
+            }
+
+
+
+            data.style.color = "#00ebff";
+            czas.style.color = "#ff00ff";
+            dzienTygodnia.style.color = "yellow";
+
+            data.textContent = dzien + " " + miesiac + " " + rok;
+
+            czas.textContent = godzina + ":" + minuty + ":" + sekundy;
+
+            dzienTygodnia.textContent = dzienTyg;
+
+
+            setTimeout("czas()",1000);
+        }
+    </script>
+</head>
+<body onload="czas()">
+    <h2>Data i czas</h2>
+    <span id="data"></span>
+    <span>|</span>
+    <span id="czas"></span>
+    <span>|</span>
+    <span id="dzienTygodnia"></span>
+
+
+
+</body>
+</html>

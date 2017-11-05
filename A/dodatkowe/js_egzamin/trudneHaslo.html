@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Arkusz E.14-01-16.08</title>
+</head>
+<body>
+    Twoje hasło: <input type="password" id="haslo">
+                 <button id="przycisk">Sprawdź</button><br>
+                 <div id="text"></div>
+    <script>
+/*trudne hasło: cyfra + mała litera + duża litera + minimum 10 znaków*/
+
+        var haslo = document.getElementById('haslo');
+        var przycisk = document.getElementById('przycisk');
+        var text = document.getElementById('text');
+
+        function wyswietl(){
+            pass = haslo.value;
+            dlugosc = pass.length;
+
+            var regCyfry = /\d/;
+            var regDuzeLitery = /[A-Z]/;
+            var regMaleLitery = /[a-z]/;
+
+            var cyfry = regCyfry.test(pass);
+            var male = regMaleLitery.test(pass);
+            var duze = regDuzeLitery.test(pass);
+
+
+            if(cyfry && male && duze && dlugosc >= 10){
+                text.style.color = "aqua";
+                text.textContent = "TRUDNE";
+            }
+            else if(cyfry && dlugosc >= 4 && dlugosc <= 6){
+                text.style.color = "blue";
+                text.textContent = "ŚREDNIE";
+            }
+            else if(dlugosc == 0){
+                text.style.color = "red";
+                text.textContent = "WPISZ HASŁO!";
+            }else if(cyfry && dlugosc >= 7){
+                text.style.color = "green";
+                text.textContent = "DOBRE";
+            }else{
+                text.style.color = "yellow";
+                text.textContent = "SŁABE";
+            }
+        }
+
+        przycisk.addEventListener('click',wyswietl);
+    </script>
+
+</body>
+</html>
