@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Przychodnia</title>
+<link rel="stylesheet" href="przychodnia.css">
 </head>
 <body>
 
@@ -24,7 +25,7 @@
 
         if($rezultat1 = mysqli_query($polaczenie, $zapytanie1)){
             echo <<<TABELA
-            <table border=1>
+            <table>
             <tr>
             <td>id</td><td>imię</td><td>nazwisko</td>
             </tr>

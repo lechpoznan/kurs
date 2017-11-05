@@ -31,7 +31,7 @@
 //wyświetlenie tabeli z danych z bazy
 
         echo <<<TABELA
-        <table border=1>
+        <table>
         <tr><td>id</td><td>imię</td><td>właściciel</td></tr>
 TABELA;
         while($wiersz = mysqli_fetch_array($rezultat)){
@@ -55,7 +55,7 @@ WIERSZE;
 //wyświetlenie tabeli z danych z bazy
 
         echo <<<TABELA
-        <table border=1>
+        <table>
         <tr><td>id</td><td>imię</td><td>właściciel</td></tr>
 TABELA;
 

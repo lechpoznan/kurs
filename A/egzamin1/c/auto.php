@@ -25,43 +25,70 @@
 
             $zapytanie = "SELECT `id`,`marka`,`model` FROM `samochody`";
 
-          //if ($rezultat = mysqli_query($polaczenie, $zapytanie)){
-          if ($rezultat = $polaczenie->query($zapytanie)){
-            echo <<<TABELA
-            <table>
-            <tr>
-            <th>id</th><th>marka</th><th>model</th>
-            </tr>
-TABELA;
 
-        //while($wiersz = $rezultat->fetch_array(MYSQLI_ASSOC)){
+          if ($rezultat = $polaczenie->query($zapytanie)){
+        echo "<ul>";
+
+
         while($wiersz = $rezultat->fetch_assoc()){
             //echo 'test';
         echo <<<WIERSZ
-            <tr>
-            <td>{$wiersz["id"]}</td>
-            </tr>
+
+            <li>{$wiersz["id"]} {$wiersz["marka"]} {$wiersz["model"]}</li>
+
 WIERSZ;
 
         }
 
-
+              echo "</ul>";
 
           }else{
               echo "Niepoprawne zapytanie";
           }
 
+        $zapytanie2 = "SELECT `Samochody_id`, `Klient` FROM `zamowienia`";
+
+        echo "<h2>Zamówienia</h2>";
+
+        if($rezultat2 = $polaczenie->query($zapytanie2)){
+
+            echo "<ul>";
+
+            while($wiersz2 = $rezultat2->fetch_assoc()){
+                echo "<li>
+                {$wiersz2['Samochody_id']}
+                {$wiersz2['Klient']}
+                </li>";
+            }
+
+            echo "</ul>";
+        }else{
+            echo 'Niepoprawne zapytanie';
+        }
 
 
+        $zapytanie3 = "SELECT * FROM `samochody` WHERE `marka` = 'Fiat'";
+
+        if($rezultat3 = $polaczenie->query($zapytanie3)){
+
+        echo "<h2>Pełne dane: Fiat</h2>";
+
+        while($wiersz3 = $rezultat3->fetch_assoc()){
+            echo "{$wiersz3['id']}
+             / {$wiersz3['marka']}
+             / {$wiersz3['model']}
+             / {$wiersz3['rocznik']}
+             / {$wiersz3['kolor']}
+             / {$wiersz3['stan']}
+            <br>";
+        }
+
+        }else{
+            echo "Niepoprawne zapytanie";
+        }
 
 
-
-
-
-
-
-
-
+        mysqli_close($polaczenie);
         }
 
 
