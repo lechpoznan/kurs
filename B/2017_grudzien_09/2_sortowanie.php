@@ -11,7 +11,10 @@
             closedir($folder);
             exit("Nie można otworzyć folderu");
         }else{
-            $sortuj = 1;
+            $sortuj = 0;
+            if(isset($_GET['sortuj'])){
+                $sortuj = $_GET['sortuj'];
+            }
             $dane = scandir($dir, $sortuj);
             echo "<ul>";
                 foreach ($dane as $wartosc){
